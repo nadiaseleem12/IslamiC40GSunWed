@@ -9,9 +9,12 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import androidx.recyclerview.widget.RecyclerView.inflate
 import com.route.islamic40gsunwed.Chapter
 import com.route.islamic40gsunwed.R
+import com.route.islamic40gsunwed.callbacks.OnChapterClickListener
 
 class ChapterNamesAdapter(val chapters: List<Chapter>) :
     RecyclerView.Adapter<ChapterNamesAdapter.ChapterNameViewHolder>() {
+    //2
+    var onChapterClickListener: OnChapterClickListener? = null
 
     class ChapterNameViewHolder(val itemChapterName: View) : ViewHolder(itemChapterName) {
         val chapterNameText: TextView = itemChapterName.findViewById(R.id.chapter_name_text)
@@ -32,6 +35,10 @@ class ChapterNamesAdapter(val chapters: List<Chapter>) :
         val item = chapters.get(position)
         holder.chapterNameText.text = item.name
         holder.chapterPositionText.text = item.position.toString()
+        holder.itemChapterName.setOnClickListener {
+            // 3-
+            onChapterClickListener?.onChapterClick(item, position)
+        }
     }
 //
 //    fun addChapter(chapter: Chapter) {

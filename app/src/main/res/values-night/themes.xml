@@ -23,6 +23,15 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="Isalmic_Content_BG">
+        <item name="android:background">@drawable/verses_dark_bg</item>
+    </style>
+
+    <style name="Back_button_style">
+        <item name="tint">@color/white</item>
+    </style>
+
+
     <style name="Islamic_BG">
         <item name="android:background">@drawable/islamic_bg_dark</item>
     </style>

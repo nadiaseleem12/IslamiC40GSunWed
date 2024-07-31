@@ -2,6 +2,10 @@ package com.route.islamic40gsunwed
 
 class Constants {
     companion object {
+        val CHAPTER_NAME_EXTRA = "chapter_name"
+        val CHAPTER_POSITION_EXTRA = "chapter_pos"
+        val HADETH_TITLE_EXTRA = "hadeth_title"
+        val HADETH_DESC_EXTRA = "hadeth_desc"
         var chapters = listOf(
             "الفاتحه",
             "البقرة",
