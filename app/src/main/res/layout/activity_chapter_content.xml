@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/Islamic_BG"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChapterContentActivity">
+
+    <TextView
+        android:id="@+id/title_toolbar"
+        style="@style/textStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="سورة الفاتحة" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        style="@style/Back_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/title_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title_toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chapter_content_recycler_view"
+        style="@style/Isalmic_Content_BG"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_toolbar"
+        app:layout_constraintWidth_percent="0.8"
+        tools:listitem="@layout/item_verse" />
+    <!--
+       1- Recycler View
+       2- TextView Inside Scroll View   -> Route app -> TextView inside ScrollView
+    -->
+</androidx.constraintlayout.widget.ConstraintLayout>
