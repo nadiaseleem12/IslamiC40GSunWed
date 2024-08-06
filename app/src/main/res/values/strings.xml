@@ -8,4 +8,5 @@
     <string name="chapter_name">Chapter Name</string>
     <string name="chapter_position">Chapter Position</string>
     <string name="quotes">Quotes</string>
+    <string name="number_of_dhikr">عدد التسبيحات</string>
 </resources>

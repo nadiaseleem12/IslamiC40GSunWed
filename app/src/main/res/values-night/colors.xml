@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="counter_box_color">@color/blue_dark</color>
+    <color name="dhikr_box_color">@color/yellow</color>
+
+</resources>
