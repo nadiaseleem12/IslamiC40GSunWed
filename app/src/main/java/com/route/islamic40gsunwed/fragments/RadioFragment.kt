@@ -6,15 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.route.islamic40gsunwed.R
+import com.route.islamic40gsunwed.databinding.FragmentRadioBinding
 
 class RadioFragment : Fragment() {
 
+    lateinit var binding:FragmentRadioBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_radio, container, false)
+        binding = FragmentRadioBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
